@@ -7,10 +7,10 @@ This is an alpha build of the game. It is a sandbox version with no enforced rul
 Please report all issues and make feature requests.
 
 ## Gameplay
-##### Audio
+### Audio
 In the alpha build there is no game audio or player audio. Please use discord for chat.
 
-##### Multiplayer
+### Multiplayer
 You can either connect to the gameserver that is prepopulated, or change...
 >Address: localhost
 
@@ -18,7 +18,7 @@ in the network HUD upon game startup. If you host a game you can play locally wi
 
 You connect in as a spectator, up to 100 per server, and any 2 people can sit down to play against eachother.
 
-####The Game
+### The Game
 You start playing by walking up to one of theplayer chairs. You will be locked in for play until you press the red exit button.
 
 To start play you simply click on the deck, you will be asked to input a MondoDeckFile to build your deck from. There are some included with the game, they are easy to make. You put the number followed by a | and then card name (card names must match the card name found in this file or the deck wont show those card faces)
@@ -26,7 +26,7 @@ To start play you simply click on the deck, you will be asked to input a MondoDe
 Prebuilt deck files for use:
 >Assets/Resources/MondoDeckFiles/
 
-#####Planet B.mm
+#### Planet B.mm
 	3|Electric Chairman
 	3|Startup Guy
 	3|AI Overlord
@@ -53,5 +53,5 @@ In order to run/edit/build the game in Unity you need to populate the folder bel
 
 with the {cardId}.mp4 files in this link, [FullRes card mp4 files.](https://drive.google.com/drive/folders/1jOW-8CFJgBwAQ8ribjDxyOZKc2DSAbZC?usp=sharing "FullRes mp4s")
 
-####Thanks
+### Thanks
 Author: rttgnck

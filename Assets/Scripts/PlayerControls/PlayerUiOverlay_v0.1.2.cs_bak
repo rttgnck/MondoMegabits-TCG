@@ -1,0 +1,77 @@
+// Player UI Overlay
+// version = '0.1.3'
+// repo = 'MondoMegabits-TCG'
+// Author(s): rttgnck
+// Description: Controls for the UI of the player 
+//
+// Changelog:
+//   v0.1.3  + Initial release
+//
+// ToDo:
+//   + Add control of the UI card slide-in/out
+//   + Add card info to overlay
+
+using UnityEngine;
+
+namespace Mondo.Player
+{
+    public class PlayerUiOverlay : MonoBehaviour
+    {
+        private Camera uiCamera;
+        private bool uiEnabled = false;
+
+        public bool Enabled
+        {
+            get { return uiEnabled; }
+            set { uiEnabled = value; }
+        }
+
+        public void TurnOnUI()
+        {
+            Debug.Log("TurnOnUI");
+            uiCamera.enabled = true;
+            uiEnabled = true;
+        }
+
+        public void TurnOffUI()
+        {
+            Debug.Log("TurnOffUI");
+            uiCamera.enabled = false;
+            uiEnabled = false;
+        }
+
+        void Start()
+        {
+            uiCamera = gameObject.GetComponent<Camera>();
+            Debug.Log($"uiCamera.name: {uiCamera.name} -- uiCamera.enabled: {uiCamera.enabled}");
+        }
+
+        //void Update()
+        //{
+        //    if (uiCamera.enabled)
+        //    {
+        //        Debug.Log($"True::: uiCamera.name: {uiCamera.name} -- uiCamera.enabled: {uiCamera.enabled}");
+        //    }
+        //    else {
+        //        Debug.Log($"False::: uiCamera.name: {uiCamera.name} -- uiCamera.enabled: {uiCamera.enabled}");
+        //    }
+            
+        //}
+
+        private void Update()
+        {
+            //if (uiEnabled && (uiCamera.enabled == false))
+            if (uiEnabled)
+            {
+                TurnOnUI();
+            }
+
+            //if (!uiEnabled && (uiCamera.enabled == true))
+            if (!uiEnabled)
+            {
+                TurnOffUI();
+            }
+        }
+    }
+}
+
